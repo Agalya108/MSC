@@ -1,0 +1,45 @@
+<app-top-nav></app-top-nav>
+
+<div class="d-flex">
+
+
+  <!-- Main Content -->
+  <div class="flex-grow-1 p-4">
+    <div class="mb-4">
+      <input type="text" class="form-control" placeholder="Search products..." [(ngModel)]="searchTerm" />
+    </div>
+
+    <h3>Product List <small class="text-muted">(Search: {{ searchTerm }})</small></h3>
+
+    <!-- Future product list -->
+    <div class="mt-3">
+      <!-- Placeholder -->
+      <div class="alert alert-info d-flex" role="alert">
+        <mat-card class="user-card" *ngFor="let product of products">
+          <mat-card-header>
+            <div mat-card-avatar class="user-avatar">
+      <img [src]="product.image" alt="User Image" />
+    </div>
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-subtitle>Active User</mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image [src]="product.image" alt="User Image" />
+
+  <mat-card-content>
+    <p>
+      {{ product.description }}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button color="primary">LIKE</button>
+    <button mat-button color="accent">SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+
+      </div>
+    </div>
+  </div>
+</div>

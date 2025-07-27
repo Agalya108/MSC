@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm px-4">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <span class="navbar-text">
+      <button class="d-flex align-items-center text-decoration-none " (click)="routeHome()">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="User" width="32" height="32"
+          class="rounded-circle ms-3 me-2">
+      </button>
+    </span>
+
+    <div class="dropdown" [class.show]="dropdownOpen">
+      <button class="d-flex align-items-center text-decoration-none" href="#" (click)="toggleDropdown($event)">
+        <img src="/assets/images/1111.png">
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" [class.show]="dropdownOpen">
+        <li><a class="dropdown-item" routerLink="/settings">Settings</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" (click)="logout()">Sign out</a></li>
+        <li><a class="dropdown-item" (click)="changePassword()">change password</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

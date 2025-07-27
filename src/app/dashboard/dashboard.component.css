@@ -1,0 +1,9 @@
+.user-card {
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.user-avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
