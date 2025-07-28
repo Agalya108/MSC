@@ -2,6 +2,16 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
 
+if Angular core shows error use
+```bash
+npm install @angular/core@19 --force
+```
+
+if Angular router shows error use
+```bash
+npm install @angular/router@19 --force
+```
+
 ## Development server
 
 To start a local development server, run:
